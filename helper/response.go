@@ -1,8 +1,9 @@
 package helper
 
 import (
-	"github.com/labstack/echo/v4"
 	"net/http"
+
+	"github.com/labstack/echo/v4"
 )
 
 type (
@@ -16,16 +17,6 @@ type (
 		Success bool        `json:"success"`
 		Message string      `json:"message"`
 		Error   interface{} `json:"error"`
-	}
-
-	successDeleteJson struct {
-		Message string `json:"message"`
-		Success bool   `json:"success"`
-	}
-
-	ErrorWithCode struct {
-		Msg  string `json:"message"`
-		Code int    `json:"status"`
 	}
 )
 
