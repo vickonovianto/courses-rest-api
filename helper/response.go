@@ -49,7 +49,5 @@ func ResponseErrorJson(c echo.Context, code int, err error) error {
 	res := errorJson{
 		Error: err.Error(),
 	}
-	c.JSON(code, res)
-
-	return err
+	return c.JSON(code, res)
 }
